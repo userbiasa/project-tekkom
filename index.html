@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Postoflio Website</title>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="detail">
+        <h1>Hai! Saya <span>Hirson</span></h1>
+        <p>
+          Saya berasal dari Sumenep <br />
+          Saya adalah seorang programer, dan <br />
+          Saya bekerja di rumah sakit <br />
+        </p>
+        <a class="btn" href="#about">tentang saya</a>
+      </div>
+      <div class="images">
+        <img src="shape.png" class="shape" />
+        <img src="animboy.png" class="person" />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const detailCls = document.getElementsByClassName("detail")[0];
+  let op = 0.05;
+  function fade() {
+    detailCls.style.opacity = op += op * 0.05;
+    if (op >= 1) {
+      return;
+    }
+    requestAnimationFrame(fade);
+  }
+
+  requestAnimationFrame(fade);
+</script>
